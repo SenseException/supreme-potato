@@ -7,11 +7,10 @@ use Budgegeria\SupremePotato\Divide;
 use Budgegeria\SupremePotato\MultipleCalculation;
 use function bovigo\assert\{assert, predicate\equals};
 
-// bovigo callmap
 use bovigo\callmap\NewInstance;
 use function bovigo\callmap\verify;
 
-class MultipleCalculationTest
+class MultipleCalculationWithCallmap
 {
     /**
      * @test
