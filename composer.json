@@ -1,0 +1,29 @@
+{
+  "name": "senseexception/supreme-potato",
+  "description": "Nothing but a test for a global installed unit test project",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Claudio Zizza",
+      "email": "claudio@budgegeria.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Budgegeria\\SupremePotato\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Budgegeria\\SupremePotato\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "bovigo/assert": "^2.1",
+    "bovigo/callmap": "^3.2"
+  },
+  "require": {
+    "php": "^7.0"
+  }
+}
