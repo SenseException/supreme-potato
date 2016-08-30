@@ -5,7 +5,7 @@ namespace Budgegeria\SupremePotato\Tests;
 use Budgegeria\SupremePotato\Calculation;
 use Budgegeria\SupremePotato\Divide;
 use Budgegeria\SupremePotato\MultipleCalculation;
-use function bovigo\assert\{assert, predicate\equals};
+use function bovigo\assert\{assert, predicate\isSameAs};
 
 use bovigo\callmap\NewInstance;
 use function bovigo\callmap\verify;
@@ -19,7 +19,7 @@ class MultipleCalculationWithCallmap
     {
         $calc = new MultipleCalculation(new Divide());
 
-        assert($calc->calc(2), equals(1));
+        assert($calc->calc(2), isSameAs(1.0));
     }
 
     /**
@@ -36,7 +36,7 @@ class MultipleCalculationWithCallmap
 
         $calc = new MultipleCalculation($calculation);
 
-        assert($calc->calc(2), equals(1));
+        assert($calc->calc(2), isSameAs(1.0));
 
         verify($calculation, 'calculate')
             ->wasCalled(2);

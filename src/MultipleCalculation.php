@@ -10,16 +10,6 @@ class MultipleCalculation
     private $calculation;
 
     /**
-     * @var int
-     */
-    private $firstCalcValue = 1;
-
-    /**
-     * @var int
-     */
-    private $secondCalcValue = 2;
-
-    /**
      * @param Calculation $calculation
      */
     public function __construct(Calculation $calculation)
@@ -33,7 +23,7 @@ class MultipleCalculation
      */
     public function calc(int $startValue) : float
     {
-        $firstResult = $this->calculation->calculate($startValue, $this->firstCalcValue);
-        return $this->calculation->calculate($firstResult, $this->secondCalcValue);
+        $firstResult = $this->calculation->calculate($startValue, 1);
+        return $this->calculation->calculate($firstResult, 2);
     }
 }
